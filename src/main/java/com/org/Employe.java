@@ -4,23 +4,35 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Employe {
-
+ 
 	
+
 	private int EmpId;
 	private String name;
-	private double salary;{
+	private double salary;
 		
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + EmpId;
+		return result;
 	}
-	public Employe() {
-		// TODO Auto-generated constructor stub
-		super();
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employe other = (Employe) obj;
+		if (EmpId != other.EmpId)
+			return false;
+		return true;
 	}
-	public Employe (int EmpId, String name, double salary) {
-		super();
-	this.EmpId=EmpId;
-	this.name = name;
-	this.salary = salary;
-	}
+
+
 	public int getEmpId() {
 		return EmpId;
 	}

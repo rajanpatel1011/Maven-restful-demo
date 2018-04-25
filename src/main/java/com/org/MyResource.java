@@ -29,7 +29,10 @@ public class MyResource {
     @Produces(value = {MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
     @Path("/getEmp")
     public Employe getEmploye() {
-    	Employe e = new Employe(122,"Rahul",40000);
+    	Employe e = new Employe();
+    	e.setEmpId(122);
+    	e.setName("Rahul");
+    	e.setSalagy(40000);
     	return e;
     }
     @POST
