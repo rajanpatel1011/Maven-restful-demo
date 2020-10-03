@@ -28,19 +28,19 @@ public class MyResource {
     @GET
     @Produces(value = {MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
     @Path("/getEmp")
-    public Employe getEmploye() {
-    	Employe e = new Employe();
+    public Employee getEmployee() {
+    	Employee e = new Employee();
     	e.setEmpId(122);
     	e.setName("Rahul");
-    	e.setSalagy(40000);
+    	e.setSalary(40000);
     	return e;
     }
     @POST
     @Path("/storeEmp")
     @Consumes(value= {MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
     @Produces(MediaType.APPLICATION_XML)
-    public Employe storeEmploye(Employe e) {
-    	System.out.println("Emp ID :"+e.getEmpId()+"Employe Name"+e.getName()+"Employe Salary"+e.getSalagy());
+    public Employee storeEmployee(Employee e) {
+    	System.out.println("Emp ID :"+e.getEmpId()+"Employee Name"+e.getName()+"Employee Salary"+e.getSalary());
     	return e;
     }
 }

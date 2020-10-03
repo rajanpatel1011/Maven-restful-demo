@@ -6,6 +6,7 @@
 <form action="webapi/injection/store" method ="post">
 Employee Id = <input type="text" name="n1">
 Employee Name = <input type="text" name="n2">
+Employee Salary = <input type="text" name="salary">
 <input type="submit" value="send" >
 </form>
 </body>
