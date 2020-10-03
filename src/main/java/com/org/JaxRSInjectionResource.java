@@ -30,7 +30,7 @@ public class JaxRSInjectionResource {
 	@POST
 	@Path("/store")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String storeEmp(@FormParam("n1")int deptid,@FormParam("n2") String name) {
-		return "Employee"+deptid+"with a name"+name+"stored";
+	public String storeEmp(@FormParam("n1")int deptid,@FormParam("n2")String name,@FormParam("salary")int salary) {
+		return "Employee " +deptid+ " with a name "+name+" and salary "+salary+" stored";
 	}
 }

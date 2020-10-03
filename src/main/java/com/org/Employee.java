@@ -3,9 +3,7 @@ package com.org;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Employe {
- 
-	
+public class Employee {
 
 	private int EmpId;
 	private String name;
@@ -26,12 +24,11 @@ public class Employe {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Employe other = (Employe) obj;
+		Employee other = (Employee) obj;
 		if (EmpId != other.EmpId)
 			return false;
 		return true;
 	}
-
 
 	public int getEmpId() {
 		return EmpId;
@@ -45,11 +42,11 @@ public class Employe {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getSalagy() {
+	public double getSalary() {
 		return salary;
 	}
-	public void setSalagy(double salagy) {
-		this.salary = salagy;
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
 
 }
